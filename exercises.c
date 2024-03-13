@@ -9,11 +9,11 @@ Ejercicio 1: Encuentra el Elemento Mayor
 Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y devuelva el valor más grande del arreglo.
 */
-int findMax(int arr[], int size) { 
-  int max = arr[0];
-  for (int i = 0; i < size; i++)
-    if(arr[i] > max)
-      max = arr[i];
+int findMax(int arreglo[], int talla) { 
+  int max = arreglo[0];
+  for (int i = 0; i < talla; i++)
+    if(arreglo[i] > max)
+      max = arreglo[i];
   return max;
 }
 
@@ -23,12 +23,12 @@ Ejercicio 2: Invertir un Arreglo
 Descripción: Escribe una función que tome un arreglo y su tamaño, y luego
 invierta el orden de sus elementos.
 */
-void reverseArray(int arr[], int size) {
-  int temp;
-  for (int i = 0; i < size / 2; i++){
-    temp = arr[i];
-    arr[i] = arr[size - i - 1 ];
-    arr[size - i - 1] = temp;
+void reverseArray(int arreglo[], int talla) {
+  int temporal;
+  for (int i = 0; i < arreglo[i] / 2; i++){
+    temporal = arreglo[i];
+    arreglo[i] = arreglo[talla - i - 1 ];
+    arreglo[talla - i - 1] = temporal;
   }
 }
 
@@ -38,12 +38,12 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
-int *filterEvenNumbers(int arr[], int size, int *newSize) { 
-  int *newArr = malloc(sizeof(int) * size);
+int *filterEvenNumbers(int arreglo[], int talla, int *newSize) { 
+  int *newArr = malloc(sizeof(int) * talla);
   int j = 0;
-  for (int i = 0; i < size; i++)
-    if(arr[i] % 2 == 0){
-      newArr[j] = arr[i];
+  for (int i = 0; i < talla; i++)
+    if(arreglo[i] % 2 == 0){
+      newArr[j] = arreglo[i];
       j++;
       
     }
@@ -56,20 +56,20 @@ Descripción: Escribe una función que tome dos arreglos
 ordenados y sus tamaños, y luego fusione estos dos
 arreglos en un tercer arreglo también ordenado.
 */
-void mergeSortedArrays(int arr1[], int size1, int arr2[], int size2,
-                       int result[]) {
+void mergeSortedArrays(int arreglo1[], int talla1, int arreglo2[], int talla2,
+                       int resultado[]) {
   int i = 0, j = 0, k = 0;
-  while (i < size1 && j < size2){
-    if (arr1[i] < arr2[j])
-      result[k++] = arr1[i++];
+  while (i < talla1 && j < talla2){
+    if (arreglo1[i] < arreglo2[j])
+      resultado[k++] = arreglo1[i++];
     else
-      result[k++] = arr2[j++];
+      resultado[k++] = arreglo2[j++];
     
   }
-  while (i < size1)
-    result[k++] = arr1[i++];
-  while (j < size2)
-    result[k++] = arr2[j++];
+  while (i < talla1)
+    resultado[k++] = arreglo1[i++];
+  while (j < talla1)
+    resultado[k++] = arreglo2[j++];
   
 }
 
