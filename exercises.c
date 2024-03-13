@@ -25,7 +25,7 @@ invierta el orden de sus elementos.
 */
 void reverseArray(int arreglo[], int talla) {
   int temporal;
-  for (int i = 0; i < arreglo[i] / 2; i++){
+  for (int i = 0; i < arreglo / 2; i++){
     temporal = arreglo[i];
     arreglo[i] = arreglo[talla - i - 1 ];
     arreglo[talla - i - 1] = temporal;
