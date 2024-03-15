@@ -82,3 +82,14 @@ exercises.c:84:1: error: control reaches end of non-void function [-Werror=retur
 cc1: all warnings being treated as errors
 Compilation failed
 c266aff
+Fri 15 Mar 2024 11:32:57 PM UTC: 
+ exercises.c | 4 +---
+ 1 file changed, 1 insertion(+), 3 deletions(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:82:47: error: returning ‘void *’ from a function with return type ‘int’ makes integer from pointer without a cast [-Werror=int-conversion]
+   82 | int checkSorted(int arr[], int size) { return NULL;}
+      |                                               ^~~~
+cc1: all warnings being treated as errors
+Compilation failed
+b1a55db
