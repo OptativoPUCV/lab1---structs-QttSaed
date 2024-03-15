@@ -126,3 +126,9 @@ exercises.c:84:7: error: ‘checkSorted’ defined but not used [-Werror=unused-
 cc1: all warnings being treated as errors
 Compilation failed
 9abd659
+Fri 15 Mar 2024 11:53:10 PM UTC: 
+ exercises.c | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+ tests:  0|2
+total_score: 50/70
+3c68a29
