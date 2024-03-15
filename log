@@ -111,3 +111,18 @@ Fri 15 Mar 2024 11:49:29 PM UTC:
  tests:  0|3
 total_score: 40/70
 d070a29
+Fri 15 Mar 2024 11:52:24 PM UTC: 
+ exercises.c | 15 ++++++++++++++-
+ 1 file changed, 14 insertions(+), 1 deletion(-)
+In file included from test.c:1:
+exercises.c: In function ‘checkSorted’:
+exercises.c:96:1: error: control reaches end of non-void function [-Werror=return-type]
+   96 | }
+      | ^
+At top level:
+exercises.c:84:7: error: ‘checkSorted’ defined but not used [-Werror=unused-function]
+   84 |   int checkSorted(int arr[], int size) {
+      |       ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+9abd659
