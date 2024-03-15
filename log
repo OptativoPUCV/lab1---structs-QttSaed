@@ -93,3 +93,9 @@ exercises.c:82:47: error: returning ‘void *’ from a function with return typ
 cc1: all warnings being treated as errors
 Compilation failed
 b1a55db
+Fri 15 Mar 2024 11:33:53 PM UTC: 
+ exercises.c | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+ tests:  0|3
+total_score: 40/70
+af245f9
