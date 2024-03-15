@@ -38,17 +38,33 @@ Descripción: Escribe una función que tome un arreglo de enteros
 y su tamaño, y luego devuelva un nuevo arreglo que contenga solo
 los números pares del arreglo original.
 */
+
 int *filterEvenNumbers(int arreglo[], int talla, int *newSize) { 
-  int *newArr = malloc(sizeof(int) * talla);
+  if (arreglo == NULL || talla <= 0 || newSize == NULL) {
+    return NULL;
+  }
+
+  int *newArr = (int *)malloc(sizeof(int) * talla);
+  if (newArr == NULL) {
+    return NULL;
+  }
+
   int j = 0;
-  for (int i = 0; i < talla; i++)
-    if(arreglo[i] % 2 == 0){
+  for (int i = 0; i < talla; i++) {
+    if (arreglo[i] % 2 == 0) {
       newArr[j] = arreglo[i];
       j++;
-      
     }
+  }
+
   *newSize = j;
-  return newArr;}
+  newArr = (int *)realloc(newArr, sizeof(int) * (*newSize));
+  if (newArr == NULL) {
+    return NULL;
+  }
+
+  return newArr;
+}
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
