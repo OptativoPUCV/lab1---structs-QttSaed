@@ -40,31 +40,16 @@ los números pares del arreglo original.
 */
 
 int *filterEvenNumbers(int arreglo[], int talla, int *newSize) { 
-  if (arreglo == NULL || talla <= 0 || newSize == NULL) {
-    return NULL;
-  }
-
-  int *newArr = (int *)malloc(sizeof(int) * talla);
-  if (newArr == NULL) {
-    return NULL;
-  }
-
+  int *newArr = malloc(sizeof(int) * talla);
   int j = 0;
-  for (int i = 0; i < talla; i++) {
-    if (arreglo[i] % 2 == 0) {
+  for (int i = 0; i < talla; i++)
+    if(arreglo[i] % 2 == 0){
       newArr[j] = arreglo[i];
       j++;
+
     }
-  }
-
   *newSize = j;
-  newArr = (int *)realloc(newArr, sizeof(int) * (*newSize));
-  if (newArr == NULL) {
-    return NULL;
-  }
-
-  return newArr;
-}
+  return newArr;}
 
 /*
 Ejercicio 4: Fusión de dos Arreglos Ordenados
